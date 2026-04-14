@@ -1,8 +1,8 @@
 package csi142.model;
 
 public class Patient{
- id
- name
- age
- contact
+private in id;
+private String name;
+private int age;
+private int contact;
 }
