@@ -1,7 +1,7 @@
 package csi142.model;
 
 public class VaccinationRecord{
-patientId
-vaccineName
+private int patientId;
+private String vaccineName;
 dateclass DataStore
 }
