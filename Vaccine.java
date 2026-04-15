@@ -1,6 +1,7 @@
 package csi142.model;
 
 public class Vaccine{
- name
- doseRequired
+ private String name;
+ private double doseRequired;
+ private String vaccineID;
 }
