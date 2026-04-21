@@ -1,7 +1,7 @@
 package csi142.model;
 
 public class Patient{
-private int id;
+private String id;
 private String name;
 private int age;
 private String contact;
@@ -11,3 +11,18 @@ private String contact;
         this.age=age;
         this.contact=contact;
 }
+   public String getID(){
+      return id;
+   }
+   public String getName(){
+      return name;
+   }
+   public String getContact(){
+      return contact;
+   }
+   public int getAge(){
+      return age;
+   }
+   public String details() { 
+       System.out.println(patientID + " " + patientName + " " + patientAge);
+    }
