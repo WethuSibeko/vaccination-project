@@ -24,6 +24,8 @@ public double getDoseRequired(){
 public int getDoseIntervals(){
     return doseIntervals;
 }
+ public abstract boolean safeForAge(int age);
+ 
 public void Vdetails(){
     System.out.println(vaccineID + " " + Vname + "Dose required: " + doseRequired + " Booster every " + doseIntervals + "days");
 }
