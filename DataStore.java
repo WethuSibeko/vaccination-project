@@ -1,4 +1,4 @@
-package csi142.model;
+package csi142.data;
 
 import java.util.ArrayList;
 import java.util.List;
