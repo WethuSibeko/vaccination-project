@@ -10,19 +10,15 @@ public class MainApp{
     num= in.nextInt();
     switch (num) {
         case 1:
-            //call method to register patients
             addPatient();
             break;
         case 2:
-            // call method to display patients
             viewPatients();
             break;
          case 3:
-            //call method to add vaccination records
             addRecord();
             break;
          case 4:
-            //call method to view vaccination records 
             viewRecord();
             break;
          case 0:
