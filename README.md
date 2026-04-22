@@ -9,7 +9,7 @@ This project is a Java console application that manages vaccination records. It 
 •	View all patients
 •	View all vaccination records
 
-What Used
+What was used
 •	Java
 •	Object-Oriented Programming (OOP)
 •	ArrayLists for data storage
