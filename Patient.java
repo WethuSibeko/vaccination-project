@@ -24,7 +24,11 @@ public Patient(String id, String name, int age, String contact ){
    public int getAge(){
       return age;
    }
-   public void details() { 
-       System.out.println(id + " " + name + " " + age);
-    }
+ @Override
+   public String toString() {
+    return "Patient ID: " + id +
+           ", Name: " + name +
+           ", Age: " + age +
+           ", Contact: " + contact;
+}
    }
