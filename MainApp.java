@@ -1,13 +1,19 @@
 package csi142.app;
+import csi142.data.DataStore;
+import csi142.model.Patient;
+import csi142.model.VaccinationRecord;
 import java.util.Scanner;
 
 public class MainApp{
+    static Scanner in = new Scanner(System.in);
     public static void main (String[]args){
-    Scanner in = new Scanner(System.in);
+    
     int num;
     do{
          System.out.println("1)Register Patients 2)View Patients 3)add Vaccination Records 4)view Vaccination Records 0)Exit");
     num= in.nextInt();
+    in.nextLine();
+
     switch (num) {
         case 1:
             addPatient();
@@ -19,7 +25,7 @@ public class MainApp{
             addRecord();
             break;
          case 4:
-            viewRecord();
+            viewRecords();
             break;
          case 0:
             System.out.println("Goodbye");
@@ -30,48 +36,49 @@ public class MainApp{
     } while(num !=0);
 }
     public static void addPatient(){
-        System.out.print("Enter ID");
-        String id = scanner.nextLine();
+        System.out.println("Enter ID");
+        String id = in.nextLine();
 
-        System.out.print("Enter Name");
-        String name = scanner.nextLine();
+        System.out.println("Enter Name");
+        String name = in.nextLine();
 
-        System.out.print("Enter Age");
-        int age = scanner.nextInt();
-        scanner.nextLine();
+        System.out.println("Enter Age");
+        int age = in.nextInt();
+        in.nextLine();
 
-        Patient p = new Patient(id, name, age);
-        DataStore.patients.add(p);
+        System.out.println("Enter Contact");
+        String contact = in.nextLine();
+
+        Patient p = new Patient(id, name, age, contact);
+        DataStore.addPatient(p);
 
         System.out.println("Patient added!");
     }
 
     public static void addRecord(){
-        System.out.print("Enter Patient ID: ")
-            String patientId= scanner.nextLine();
+        System.out.println("Enter Patient ID: ");
+        String patientID = in.nextLine();
 
-        System.out.print("Enter Vaccine Name");
-        String vaccineName= scanner.nextLine();
+        System.out.println("Enter Vaccine Name");
+        String vaccineName= in.nextLine();
 
-        System.out.print("Enter Date:"):
-            String date = scanner.nextLine();
+        System.out.println("Enter Date:");
+        String date = in.nextLine();
 
-        VaccinationRecord record = new VaccinationRecord(patinteId, vaccineName, date);
-        DataStore.records.add(record);
+        VaccinationRecord r = new VaccinationRecord(patientID, vaccineName, date);
+        DataStore.addRecord(r);
 
         System.out.println("Record added!");
     }
 
     public static void viewPatients(){
-        for (Patient p: DataStore.patients){
+        for (Patient p : DataStore.getPatients()){
             System.out.println(p);
         }
     }
 
     public static void viewRecords(){
-        for (VaccinationRecord r: 
-             DataStore.records) {
-
+        for (VaccinationRecord r : DataStore.getRecords()) {
             System.out.println(r);
         }
     }      
