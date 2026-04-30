@@ -6,7 +6,7 @@ public abstract class Vaccine{
  private String vaccineID;
  private int doseIntervals;
  
- public Vaccine(String Vname, String vaccineID, double doseRequired, int doseIntervals){
+ public Vaccine(String Vname, String vaccineID, int doseRequired, int doseIntervals){
   this.Vname = Vname;
   this.vaccineID = vaccineID;
   this.doseRequired = doseRequired;
