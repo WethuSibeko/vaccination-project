@@ -2,7 +2,7 @@ package csi142.model;
 
 public abstract class Vaccine{
  private String Vname;
- private double doseRequired;
+ private int doseRequired;
  private String vaccineID;
  private int doseIntervals;
  
@@ -12,13 +12,13 @@ public abstract class Vaccine{
   this.doseRequired = doseRequired;
   this.doseIntervals = doseIntervals;
 }
-public String getvaccineID(){
+public String getVaccineID(){
     return vaccineID;
 }
 public String getVname(){
     return Vname;
 }
-public double getDoseRequired(){
+public int getDoseRequired(){
     return doseRequired;
 }
 public int getDoseIntervals(){
