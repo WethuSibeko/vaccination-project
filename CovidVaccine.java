@@ -2,8 +2,8 @@ package csi142.model;
 
 public class CovidVaccine extends Vaccine{
     
-    public CovidVaccine(String vName, String vaccineID, int doseRequired, int doseIntervals){
-        super(vName, vaccineID, doseRequired, doseIntervals);
+    public CovidVaccine(String Vname, String vaccineID, int doseRequired, int doseIntervals){
+        super(Vname, vaccineID, doseRequired, doseIntervals);
     }
 
     @Override 
